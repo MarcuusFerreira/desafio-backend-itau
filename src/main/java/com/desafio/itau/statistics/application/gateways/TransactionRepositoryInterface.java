@@ -6,4 +6,6 @@ public interface TransactionRepositoryInterface {
 
     void save(Transaction transaction);
 
+    void delete();
+
 }

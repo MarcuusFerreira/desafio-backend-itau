@@ -14,7 +14,14 @@ public class TransactionRepositoryInMemory implements TransactionRepositoryInter
     @Override
     public void save(Transaction transaction) {
         transactions.put(transaction.getDatetime(), transaction);
-        System.out.println(transactions);
     }
 
+    @Override
+    public void delete() {
+        transactions.clear();
+    }
+
+    public Map<OffsetDateTime, Transaction> getTransactions() {
+        return this.transactions;
+    }
 }
