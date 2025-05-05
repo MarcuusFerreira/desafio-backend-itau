@@ -52,7 +52,7 @@ public class TransactionRestControllerTest {
         mockMvc.perform(post("/transacao")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
-            .andExpect(status().isUnprocessableEntity());
+                .andExpect(status().isUnprocessableEntity());
     }
 
     @Test
@@ -89,7 +89,7 @@ public class TransactionRestControllerTest {
         mockMvc.perform(delete("/transacao"))
                 .andExpect(status().isOk());
         verify(deleteTransaction, times(1)).delete();
-        assertTrue(transactionRepository.getTransactions().isEmpty());
+        assertTrue(transactionRepository.findAll().isEmpty());
     }
 
 }

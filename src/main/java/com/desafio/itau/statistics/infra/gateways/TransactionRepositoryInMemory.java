@@ -6,6 +6,7 @@ import com.desafio.itau.statistics.domain.entities.transactions.Transaction;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class TransactionRepositoryInMemory implements TransactionRepositoryInterface {
 
@@ -21,7 +22,17 @@ public class TransactionRepositoryInMemory implements TransactionRepositoryInter
         transactions.clear();
     }
 
-    public Map<OffsetDateTime, Transaction> getTransactions() {
+    @Override
+    public Map<OffsetDateTime, Transaction> findAll() {
         return this.transactions;
     }
+
+    @Override
+    public Map<OffsetDateTime, Transaction> findByDateGreaterThan(OffsetDateTime date) {
+        return this.transactions.entrySet()
+                .stream()
+                .filter(entry -> entry.getKey().isAfter(date))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
 }

@@ -34,7 +34,7 @@ public class DeleteTransactionTest {
     public void deleteTransaction() {
         ResponseEntity<?> response = transactionRestController.delete();
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertTrue(transactionRepository.getTransactions().isEmpty());
+        assertTrue(transactionRepository.findAll().isEmpty());
         verify(deleteTransaction, times(1)).delete();
     }
 }
