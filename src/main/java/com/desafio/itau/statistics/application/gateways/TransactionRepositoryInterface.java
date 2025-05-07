@@ -1,6 +1,7 @@
 package com.desafio.itau.statistics.application.gateways;
 
 import com.desafio.itau.statistics.domain.entities.transactions.Transaction;
+import com.desafio.itau.statistics.domain.entities.transactions.TransactionKey;
 
 import java.time.OffsetDateTime;
 import java.util.Map;
@@ -11,8 +12,8 @@ public interface TransactionRepositoryInterface {
 
     void delete();
 
-    Map<OffsetDateTime, Transaction> findAll();
+    Map<TransactionKey, Transaction> findAll();
 
-    Map<OffsetDateTime, Transaction> findByDateGreaterThan(OffsetDateTime date);
+    Map<TransactionKey, Transaction> findByDateGreaterThan(OffsetDateTime date);
 
 }

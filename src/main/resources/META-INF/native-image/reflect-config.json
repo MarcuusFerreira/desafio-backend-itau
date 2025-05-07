@@ -230,7 +230,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"handleMethodArgumentNotValidException","parameterTypes":["org.springframework.web.bind.MethodArgumentNotValidException"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.controller.statistics.StatisticsRestController",
@@ -250,16 +250,8 @@
   "name":"com.desafio.itau.statistics.infra.dto.request.TransactionDTO",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["java.math.BigDecimal","java.time.OffsetDateTime"] }]
-},
-{
-  "name":"com.desafio.itau.statistics.infra.dto.response.ErrorResponseDTO",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"error","parameterTypes":[] }, {"name":"message","parameterTypes":[] }, {"name":"status","parameterTypes":[] }, {"name":"timestamp","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.gateways.TransactionRepositoryInMemory",

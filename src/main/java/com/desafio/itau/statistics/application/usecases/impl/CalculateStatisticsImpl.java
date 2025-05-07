@@ -4,6 +4,7 @@ import com.desafio.itau.statistics.application.gateways.TransactionRepositoryInt
 import com.desafio.itau.statistics.application.usecases.interfaces.CalculateStatistics;
 import com.desafio.itau.statistics.domain.entities.statistics.Statistics;
 import com.desafio.itau.statistics.domain.entities.transactions.Transaction;
+import com.desafio.itau.statistics.domain.entities.transactions.TransactionKey;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -29,7 +30,7 @@ public class CalculateStatisticsImpl implements CalculateStatistics {
     public Statistics calculate() {
         OffsetDateTime time = OffsetDateTime.now().minusSeconds(seconds);
         System.out.println(time);
-        Map<OffsetDateTime, Transaction> transactionMap = transactionRepository.findByDateGreaterThan(time);
+        Map<TransactionKey, Transaction> transactionMap = transactionRepository.findByDateGreaterThan(time);
         List<Transaction> transactions = new ArrayList<Transaction>(transactionMap.values());
         if (transactions.isEmpty()) {
             return new Statistics(0, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
