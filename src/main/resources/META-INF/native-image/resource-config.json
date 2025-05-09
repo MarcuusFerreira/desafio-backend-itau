@@ -3,7 +3,23 @@
   "includes":[{
     "pattern":"\\QMETA-INF/build-info.properties\\E"
   }, {
+    "pattern":"\\QMETA-INF/maven/org.webjars.npm/swagger-ui/pom.properties\\E"
+  }, {
+    "pattern":"\\QMETA-INF/maven/org.webjars/swagger-ui/pom.properties\\E"
+  }, {
     "pattern":"\\QMETA-INF/resources/index.html\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars-locator.properties\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars/swagger-ui/5.18.2/index.html\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars/swagger-ui/5.18.2/swagger-initializer.js\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars/swagger-ui/5.18.2\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars/swagger-ui/index.html\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/webjars/swagger-ui/swagger-initializer.js\\E"
   }, {
     "pattern":"\\QMETA-INF/services/ch.qos.logback.classic.spi.Configurator\\E"
   }, {
@@ -151,6 +167,8 @@
   }, {
     "pattern":"\\Qorg/springdoc/core/conditions/MultipleOpenApiGroupsCondition$OnGroupedOpenApiBean.class\\E"
   }, {
+    "pattern":"\\Qorg/springdoc/core/conditions/MultipleOpenApiGroupsCondition$OnListGroupedOpenApiBean.class\\E"
+  }, {
     "pattern":"\\Qorg/springdoc/core/conditions/MultipleOpenApiGroupsCondition.class\\E"
   }, {
     "pattern":"\\Qorg/springdoc/core/conditions/MultipleOpenApiSupportCondition$OnActuatorDifferentPort.class\\E"
@@ -197,6 +215,8 @@
   }, {
     "pattern":"\\Qorg/springdoc/core/configuration/SpringDocSortConfiguration.class\\E"
   }, {
+    "pattern":"\\Qorg/springdoc/core/configuration/SpringDocSpecPropertiesConfiguration.class\\E"
+  }, {
     "pattern":"\\Qorg/springdoc/core/configuration/SpringDocUIConfiguration.class\\E"
   }, {
     "pattern":"\\Qorg/springdoc/core/properties/AbstractSwaggerUiConfigProperties$Direction.class\\E"
@@ -220,8 +240,6 @@
     "pattern":"\\Qorg/springdoc/core/properties/SpringDocConfigProperties$Webjars.class\\E"
   }, {
     "pattern":"\\Qorg/springdoc/core/properties/SpringDocConfigProperties.class\\E"
-  }, {
-    "pattern":"\\Qorg/springdoc/core/properties/SwaggerUiConfigParameters.class\\E"
   }, {
     "pattern":"\\Qorg/springdoc/core/properties/SwaggerUiConfigProperties$Csrf.class\\E"
   }, {
@@ -394,6 +412,8 @@
     "pattern":"\\Qorg/springframework/boot/autoconfigure/validation/PrimaryDefaultValidatorPostProcessor.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/validation/ValidationAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qorg/springframework/boot/autoconfigure/web/ConditionalOnEnabledResourceChain.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/boot/autoconfigure/web/client/NotReactiveWebApplicationCondition$ReactiveWebApplication.class\\E"
   }, {

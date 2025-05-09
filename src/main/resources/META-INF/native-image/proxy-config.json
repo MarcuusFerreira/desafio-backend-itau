@@ -12,12 +12,27 @@
     "interfaces":["org.springframework.boot.context.properties.ConfigurationProperties"]
   },
   {
+    "interfaces":["org.springframework.stereotype.Controller"]
+  },
+  {
     "interfaces":["org.springframework.web.bind.annotation.ControllerAdvice"]
+  },
+  {
+    "interfaces":["org.springframework.web.bind.annotation.DeleteMapping"]
   },
   {
     "interfaces":["org.springframework.web.bind.annotation.ExceptionHandler"]
   },
   {
+    "interfaces":["org.springframework.web.bind.annotation.GetMapping"]
+  },
+  {
+    "interfaces":["org.springframework.web.bind.annotation.PostMapping"]
+  },
+  {
     "interfaces":["org.springframework.web.bind.annotation.RequestMapping"]
+  },
+  {
+    "interfaces":["org.springframework.web.bind.annotation.RestController"]
   }
 ]
