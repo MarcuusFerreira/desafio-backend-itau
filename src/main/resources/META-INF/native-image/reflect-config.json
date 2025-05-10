@@ -120,6 +120,16 @@
   "queryAllPublicMethods":true
 },
 {
+  "name":"com.desafio.itau.statistics.application.usecases.annotations.DateCannotBeInFuture",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"groups","parameterTypes":[] }, {"name":"message","parameterTypes":[] }, {"name":"payload","parameterTypes":[] }, {"name":"validationAppliesTo","parameterTypes":[] }]
+},
+{
+  "name":"com.desafio.itau.statistics.application.usecases.annotations.NonNegative",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"groups","parameterTypes":[] }, {"name":"message","parameterTypes":[] }, {"name":"payload","parameterTypes":[] }, {"name":"validationAppliesTo","parameterTypes":[] }]
+},
+{
   "name":"com.desafio.itau.statistics.application.usecases.impl.CalculateStatisticsImpl",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -151,6 +161,22 @@
   "name":"com.desafio.itau.statistics.application.usecases.interfaces.SaveTransaction",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true
+},
+{
+  "name":"com.desafio.itau.statistics.application.usecases.validators.DateCannotBeInFutureValidator",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.desafio.itau.statistics.application.usecases.validators.NonNegativeValidator",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.config.StatisticsConfiguration",
@@ -202,40 +228,44 @@
   "name":"com.desafio.itau.statistics.domain.entities.statistics.Statistics",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getAvg","parameterTypes":[] }, {"name":"getCount","parameterTypes":[] }, {"name":"getMax","parameterTypes":[] }, {"name":"getMin","parameterTypes":[] }, {"name":"getSum","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.controller.GlobalRestExceptionHandler",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"handleMethodArgumentNotValidException","parameterTypes":["org.springframework.web.bind.MethodArgumentNotValidException"] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.controller.statistics.StatisticsRestController",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["com.desafio.itau.statistics.application.usecases.interfaces.CalculateStatistics"] }]
+  "methods":[{"name":"<init>","parameterTypes":["com.desafio.itau.statistics.application.usecases.interfaces.CalculateStatistics"] }, {"name":"getStatistics","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.controller.transaction.TransactionRestController",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["com.desafio.itau.statistics.application.usecases.interfaces.SaveTransaction","com.desafio.itau.statistics.application.usecases.interfaces.DeleteTransaction"] }]
+  "methods":[{"name":"<init>","parameterTypes":["com.desafio.itau.statistics.application.usecases.interfaces.SaveTransaction","com.desafio.itau.statistics.application.usecases.interfaces.DeleteTransaction"] }, {"name":"delete","parameterTypes":[] }, {"name":"save","parameterTypes":["com.desafio.itau.statistics.infra.dto.request.TransactionDTO"] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.dto.request.TransactionDTO",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["java.math.BigDecimal","java.time.OffsetDateTime"] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.dto.response.ErrorResponseDTO",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"error","parameterTypes":[] }, {"name":"message","parameterTypes":[] }, {"name":"status","parameterTypes":[] }, {"name":"timestamp","parameterTypes":[] }]
 },
 {
   "name":"com.desafio.itau.statistics.infra.gateways.TransactionRepositoryInMemory",
@@ -925,6 +955,10 @@
   "queryAllDeclaredMethods":true
 },
 {
+  "name":"jakarta.validation.ConstraintValidator",
+  "queryAllPublicMethods":true
+},
+{
   "name":"jakarta.validation.Valid",
   "queryAllDeclaredMethods":true
 },
@@ -941,7 +975,8 @@
 },
 {
   "name":"jakarta.validation.constraints.NotNull",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"groups","parameterTypes":[] }, {"name":"message","parameterTypes":[] }, {"name":"payload","parameterTypes":[] }]
 },
 {
   "name":"jakarta.validation.executable.ExecutableValidator"
@@ -1005,6 +1040,10 @@
   "queryAllDeclaredMethods":true
 },
 {
+  "name":"java.lang.Comparable",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"java.lang.Deprecated",
   "queryAllPublicMethods":true
 },
@@ -1036,7 +1075,8 @@
 },
 {
   "name":"java.lang.Number",
-  "allDeclaredFields":true
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"java.lang.Object",
@@ -1047,7 +1087,8 @@
 {
   "name":"java.lang.Record",
   "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
 },
 {
   "name":"java.lang.Short",
@@ -1188,7 +1229,9 @@
 },
 {
   "name":"java.math.BigDecimal",
-  "allDeclaredFields":true
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
 },
 {
   "name":"java.math.BigInteger"
@@ -1645,6 +1688,14 @@
 },
 {
   "name":"org.h2.server.web.JakartaWebServlet"
+},
+{
+  "name":"org.hibernate.validator.internal.constraintvalidators.bv.NotNullValidator",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"org.hibernate.validator.internal.engine.AbstractConfigurationImpl",
@@ -3933,7 +3984,8 @@
 },
 {
   "name":"org.springframework.format.annotation.DateTimeFormat",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"value","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.format.annotation.DateTimeFormat$ISO"
