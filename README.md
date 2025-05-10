@@ -47,7 +47,6 @@ Todos os dados são armazenados **em memória**, conforme especificado no desafi
 - ✅ **Testes unitários** e de integração com cobertura das principais regras de negócio
 - ✅ **Tratamento de erros estruturado**, com mensagens de erro customizadas
 - ✅ **Swagger UI** acessível via `/swagger-ui.html` para facilitar testes e visualização da API
-- ✅ **Observabilidade** com logs estruturados
 - ✅ **Aplicação containerizada com Docker**
 - ✅ **Configuração dinâmica** do tempo de análise via variável de ambiente (`STATISTICS_SECONDS`)
 
